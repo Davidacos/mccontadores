@@ -20,7 +20,7 @@ export default function AboutSummary() {
             <AnimatedSection>
               <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl border-8 border-white group">
                 <OptimizedImage
-                  src="/images/about-meeting.png"
+                  src="/images/reunion.jpg"
                   alt="Equipo de contadores en reunión"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"

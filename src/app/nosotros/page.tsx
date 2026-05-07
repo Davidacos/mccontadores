@@ -21,8 +21,8 @@ export default function Nosotros() {
     { title: "Tributarios", desc: "Optimizar la gestión tributaria mediante planeación fiscal, cumplimiento oportuno y minimización de riesgos.", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=600&auto=format&fit=crop" },
     { title: "Fiscales", desc: "Fortalecer el control y la transparencia en el cumplimiento de disposiciones fiscales previniendo sanciones.", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop" },
     { title: "Financieros", desc: "Proporcionar análisis financieros estratégicos que faciliten decisiones, mejoren rentabilidad y crecimiento.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" },
-    { title: "Comerciales", desc: "Ampliar la participación ofreciendo servicios diferenciados basados en calidad, confianza y valor agregado.", image: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7?q=80&w=600&auto=format&fit=crop" },
-    { title: "Operativos", desc: "Optimizar procesos internos mediante metodologías eficientes, innovación y mejora continua.", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop" }
+    { title: "Comerciales", desc: "Ampliar la participación ofreciendo servicios diferenciados basados en calidad, confianza y valor agregado.", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop" },
+    { title: "Operativos", desc: "Optimizar procesos internos mediante metodologías eficientes, innovación y mejora continua.", image: "/images/operativos_team.png" }
   ];
 
   return (
