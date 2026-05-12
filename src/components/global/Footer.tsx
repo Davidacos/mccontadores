@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import OptimizedImage from "@/components/global/OptimizedImage";
 
 export default function Footer() {
   return (
@@ -9,13 +10,14 @@ export default function Footer() {
           
           {/* Logo & About */}
           <div className="flex flex-col gap-6 lg:pr-8">
-            <Link href="/" className="inline-block">
-              <div className="font-serif font-bold text-4xl tracking-tighter text-color-gold drop-shadow-md">
-                MC
-              </div>
-              <div className="text-color-gold font-bold text-sm tracking-widest uppercase mb-1">
-                Contadores COL S.A.S.
-              </div>
+            <Link href="/" className="inline-block w-max transition-transform duration-300 hover:scale-105">
+              <OptimizedImage
+                src="/images/logo.png"
+                alt="Logo MC Contadores COL S.A.S"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Firma especializada en servicios de auditoría y consultoría contable, orientada a proporcionar soluciones integrales bajo los más altos estándares de calidad.
@@ -41,7 +43,7 @@ export default function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-color-gold/50 group-hover:bg-color-gold transition-colors"></span>
                 Sobre Nosotros
               </Link>
-              <a href="https://wa.me/573182600651?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-color-gold transition-colors text-sm flex items-center gap-2 group">
+              <a href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-color-gold transition-colors text-sm flex items-center gap-2 group">
                 <span className="w-1.5 h-1.5 rounded-full bg-color-gold/50 group-hover:bg-color-gold transition-colors"></span>
                 Contacto
               </a>

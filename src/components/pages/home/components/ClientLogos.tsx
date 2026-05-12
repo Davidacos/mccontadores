@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { FaBuilding, FaHospital, FaIndustry, FaCity, FaLandmark, FaHotel } from "react-icons/fa";
 
 export default function ClientLogos() {
@@ -23,17 +22,8 @@ export default function ClientLogos() {
       
       <div className="relative w-full flex flex-col gap-8 md:gap-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         {/* Row 1: Moves Left to Right */}
-        <motion.div
-          className="flex gap-12 md:gap-24 items-center whitespace-nowrap px-4 w-max"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 30,
-              ease: "linear",
-            },
-          }}
+        <div
+          className="flex gap-12 md:gap-24 items-center whitespace-nowrap px-4 w-max animate-[marquee_30s_linear_infinite]"
         >
           {/* Duplicate logos to ensure seamless scroll */}
           {[...logos, ...logos, ...logos].map((logo, index) => {
@@ -48,20 +38,11 @@ export default function ClientLogos() {
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
         {/* Row 2: Moves Right to Left (Negative to Zero) */}
-        <motion.div
-          className="flex gap-12 md:gap-24 items-center whitespace-nowrap px-4 w-max"
-          animate={{ x: ["-50%", "0%"] }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 35, // Slightly different duration for a parallax feel
-              ease: "linear",
-            },
-          }}
+        <div
+          className="flex gap-12 md:gap-24 items-center whitespace-nowrap px-4 w-max animate-[marquee-reverse_35s_linear_infinite]"
         >
           {/* Duplicate logos to ensure seamless scroll, reverse the array so it looks different */}
           {[...logos.reverse(), ...logos, ...logos].map((logo, index) => {
@@ -76,7 +57,7 @@ export default function ClientLogos() {
               </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

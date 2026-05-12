@@ -55,7 +55,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-start gap-4 w-full sm:w-auto"
             >
               <a
-                href="https://wa.me/573182600651?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios."
+                href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-color-gold text-color-navy font-bold rounded-md hover:bg-color-navy hover:text-white transition-all duration-300 w-full sm:w-auto text-center shadow-lg hover:shadow-xl hover:-translate-y-1"

@@ -23,6 +23,7 @@ export default function AboutSummary() {
                   src="/images/reunion.jpg"
                   alt="Equipo de contadores en reunión"
                   fill
+                  priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   containerClassName="w-full h-full"

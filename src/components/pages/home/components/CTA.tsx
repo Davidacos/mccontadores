@@ -28,7 +28,7 @@ export default function CTA() {
                 whileTap={{ scale: 0.95 }}
               >
                 <a 
-                  href="https://wa.me/573182600651?text=Hola%20MC%20Contadores,%20me%20gustar%C3%ADa%20agendar%20una%20consulta." 
+                  href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20me%20gustar%C3%ADa%20agendar%20una%20consulta." 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-12 py-5 bg-color-gold text-color-navy font-bold rounded-lg hover:bg-white hover:text-color-navy transition-all duration-300 shadow-xl shadow-color-gold/20"

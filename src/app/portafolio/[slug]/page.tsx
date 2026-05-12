@@ -2,9 +2,11 @@ import AnimatedSection from "@/components/global/AnimatedSection";
 import MarketingBanner from "@/components/global/MarketingBanner";
 import WhyChooseUs from "@/components/pages/home/components/WhyChooseUs";
 import ClientLogos from "@/components/pages/home/components/ClientLogos";
+import TeamSection from "@/components/pages/nosotros/components/TeamSection";
+import FAQSection from "@/components/global/FAQSection";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FaCheck, FaSearchDollar, FaChartPie, FaFileInvoiceDollar, FaBuilding, FaArrowLeft } from "react-icons/fa";
+import { FaCheck, FaSearchDollar, FaChartPie, FaFileInvoiceDollar, FaBuilding, FaArrowLeft, FaQuoteRight, FaWhatsapp } from "react-icons/fa";
 import AnimatedUnderline from "@/components/global/AnimatedUnderline";
 
 const serviceData = {
@@ -19,6 +21,12 @@ const serviceData = {
       "Contabilidad financiera integral y actualizada.",
       "Contabilidad de costos detallada para optimizar recursos.",
       "Análisis financiero profundo para respaldar la toma de decisiones gerenciales."
+    ],
+    commercialPitch: "Transformamos los datos en información estratégica. La contabilidad moderna no es solo cumplir un requisito legal, es la brújula financiera de su empresa. Nuestro enfoque proactivo garantiza transparencia ante socios, evita requerimientos regulatorios y le brinda la claridad necesaria para escalar su negocio con confianza.",
+    features: [
+      { title: "Estados Financieros NIIF", description: "Elaboración de estados financieros bajo Normas Internacionales (NIIF), otorgando validez global a sus cifras y facilitando la atracción de inversión." },
+      { title: "Análisis de Costos y Rentabilidad", description: "Identificamos márgenes precisos por línea de negocio, ayudando a optimizar el uso de recursos y maximizar sus utilidades netas." },
+      { title: "Reportes Gerenciales y KPIs", description: "Diseñamos tableros de control personalizados que traducen la complejidad contable en métricas claras para la toma de decisiones gerencial." }
     ]
   },
   "impuestos": {
@@ -32,6 +40,12 @@ const serviceData = {
       "Planificación fiscal preventiva para optimizar la carga tributaria.",
       "Representación profesional ante la autoridad fiscal (DIAN y secretarías de hacienda).",
       "Actualización constante sobre normatividad tributaria vigente."
+    ],
+    commercialPitch: "La planificación fiscal inteligente es la clave para la liquidez empresarial. No nos limitamos a liquidar impuestos; analizamos la estructura de su negocio para aplicar estrategias tributarias que maximicen sus beneficios de ley, mitigando riesgos de sanciones con la DIAN y asegurando el flujo de caja.",
+    features: [
+      { title: "Planeación Tributaria Preventiva", description: "Proyectamos sus impuestos con antelación, permitiendo estrategias legales que optimizan la carga fiscal antes del cierre de año." },
+      { title: "Defensa y Requerimientos DIAN", description: "Asumimos la representación técnica ante requerimientos de autoridades fiscales, protegiendo el patrimonio de la empresa." },
+      { title: "Auditoría Fiscal Integral", description: "Revisión exhaustiva de declaraciones previas para detectar contingencias, corregir errores y solicitar saldos a favor si aplican." }
     ]
   },
   "asesoria": {
@@ -45,6 +59,12 @@ const serviceData = {
       "Planificación estratégica a corto, mediano y largo plazo.",
       "Análisis exhaustivo de riesgos financieros y operativos.",
       "Asesoría completa en la constitución y estructuración de nuevas empresas."
+    ],
+    commercialPitch: "En un mercado volátil, la intuición no basta. Nuestra asesoría financiera actúa como un copiloto experto para su junta directiva. Evaluamos proyectos de inversión, estructuramos financiamiento y diseñamos modelos de negocio que blindan a su empresa contra riesgos, asegurando un crecimiento sostenido.",
+    features: [
+      { title: "Evaluación de Proyectos", description: "Análisis de factibilidad y retorno de inversión (TIR/VPN) para asegurar que cada nuevo paso de su empresa sea rentable." },
+      { title: "Reestructuración Financiera", description: "Optimización de la estructura de capital y renegociación de pasivos para mejorar la salud financiera y la liquidez." },
+      { title: "Valoración de Empresas", description: "Determinación objetiva y técnica del valor de su compañía para fusiones, adquisiciones o entrada de nuevos socios." }
     ]
   },
   "outsourcing": {
@@ -58,6 +78,12 @@ const serviceData = {
       "Administración integral de nómina, seguridad social y prestaciones.",
       "Gestión de tesorería, flujo de caja y pagos a proveedores.",
       "Informes periódicos de gestión y soporte administrativo continuo."
+    ],
+    commercialPitch: "Libérese de la carga operativa y concéntrese en el 'core' de su negocio. Nuestro servicio de Outsourcing BPO integra tecnología y talento experto para gestionar sus procesos de back-office. Operamos como su departamento financiero interno, garantizando eficiencia, reducción de costos y cero errores operativos.",
+    features: [
+      { title: "Procesamiento en Tiempo Real", description: "Gestión continua de la información mediante software ERP en la nube, garantizando que su contabilidad esté siempre actualizada." },
+      { title: "Gestión Integral de Nómina", description: "Liquidación exacta de salarios, seguridad social, prestaciones y retenciones, cumpliendo estrictamente con la normativa laboral." },
+      { title: "Control de Tesorería y Pagos", description: "Administración segura de flujos de caja, programación de pagos a proveedores y conciliaciones bancarias automáticas." }
     ]
   }
 };
@@ -96,9 +122,18 @@ export default async function ServicePage(props: { params: Params }) {
                   <AnimatedUnderline />
                 </span>
               </h1>
-              <p className="text-xl leading-relaxed text-gray-300">
+              <p className="text-xl leading-relaxed text-gray-300 mb-8">
                 {data.description}
               </p>
+              
+              <a 
+                href={`https://wa.me/573214024276?text=${encodeURIComponent(`Hola MC Contadores, me gustaría saber más sobre sus servicios de ${data.titleHighlight}.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-color-gold text-color-navy font-bold rounded-full hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-black/20"
+              >
+                Saber más <FaWhatsapp className="text-xl" />
+              </a>
             </AnimatedSection>
             
             <AnimatedSection delay={0.2} className="md:w-2/5 flex justify-center">
@@ -139,8 +174,60 @@ export default async function ServicePage(props: { params: Params }) {
         </div>
       </section>
 
+      {/* Detailed Commercial Info Section */}
+      <section className="py-24 bg-color-gray-light relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_left,var(--tw-gradient-stops))] from-white via-transparent to-transparent opacity-60 pointer-events-none"></div>
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Commercial Pitch */}
+            <AnimatedSection className="lg:w-1/2">
+              <div className="inline-block px-4 py-1 border border-color-navy/20 rounded-full mb-6 bg-white shadow-sm">
+                <span className="text-color-navy font-bold text-xs tracking-widest uppercase">
+                  Nuestro Enfoque Profesional
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-color-navy mb-6 leading-tight">
+                Más que números, <br className="hidden md:block"/>
+                <span className="text-color-gold relative inline-block">
+                  estrategia para su negocio
+                  <AnimatedUnderline />
+                </span>
+              </h2>
+              <div className="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-color-gold relative">
+                <FaQuoteRight className="absolute top-6 right-8 text-4xl text-gray-100" />
+                <p className="text-lg text-gray-700 leading-relaxed relative z-10 font-medium">
+                  "{data.commercialPitch}"
+                </p>
+              </div>
+            </AnimatedSection>
+
+            {/* Features Grid */}
+            <div className="lg:w-1/2 grid grid-cols-1 gap-6">
+              {data.features.map((feature, idx) => (
+                <AnimatedSection key={idx} delay={idx * 0.1}>
+                  <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 group">
+                    <h3 className="text-xl font-bold text-color-navy mb-3 group-hover:text-color-gold transition-colors flex items-center gap-3">
+                      <div className="flex-shrink-0 w-2 h-2 rounded-full bg-color-gold"></div>
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed pl-5">
+                      {feature.description}
+                    </p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <WhyChooseUs />
+
+      {/* Team Section */}
+      <TeamSection />
 
       {/* Client Logos Section */}
       <section className="py-16 bg-white border-t border-gray-100 overflow-hidden">
@@ -154,6 +241,9 @@ export default async function ServicePage(props: { params: Params }) {
         </div>
         <ClientLogos />
       </section>
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Marketing CTA */}
       <MarketingBanner />

@@ -152,8 +152,6 @@ export default function Testimonials() {
         <div 
           ref={row1Ref}
           className="flex gap-4 md:gap-8 overflow-x-auto px-8 pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] w-full"
-          onMouseEnter={handleInteractStart}
-          onMouseLeave={handleInteractEnd}
           onTouchStart={handleInteractStart}
           onTouchEnd={handleInteractEnd}
         >
@@ -166,8 +164,6 @@ export default function Testimonials() {
         <div 
           ref={row2Ref}
           className="flex gap-4 md:gap-8 overflow-x-auto px-8 pb-4 ml-4 md:ml-12 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] w-full"
-          onMouseEnter={handleInteractStart}
-          onMouseLeave={handleInteractEnd}
           onTouchStart={handleInteractStart}
           onTouchEnd={handleInteractEnd}
         >

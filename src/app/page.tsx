@@ -6,6 +6,7 @@ import TeamSection from "@/components/pages/nosotros/components/TeamSection";
 import Testimonials from "@/components/pages/home/components/Testimonials";
 import CTA from "@/components/pages/home/components/CTA";
 import ContactInfoBanner from "@/components/pages/home/components/ContactInfoBanner";
+import FAQSection from "@/components/global/FAQSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ContactInfoBanner />
       <TeamSection />
       <Testimonials />
+      <FAQSection />
       <CTA />
     </div>
   );
