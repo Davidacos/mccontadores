@@ -43,7 +43,7 @@ export default function Footer() {
                 <span className="w-1.5 h-1.5 rounded-full bg-color-gold/50 group-hover:bg-color-gold transition-colors"></span>
                 Sobre Nosotros
               </Link>
-              <a href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-color-gold transition-colors text-sm flex items-center gap-2 group">
+              <a href="https://wa.me/573159105890?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-color-gold transition-colors text-sm flex items-center gap-2 group">
                 <span className="w-1.5 h-1.5 rounded-full bg-color-gold/50 group-hover:bg-color-gold transition-colors"></span>
                 Contacto
               </a>
@@ -88,8 +88,9 @@ export default function Footer() {
                   <FaPhoneAlt className="text-color-gold group-hover:text-color-navy transition-colors duration-300 text-xs" />
                 </div>
                 <div className="flex flex-col pt-1">
-                  <span className="hover:text-white transition-colors">318 260 0651</span>
-                  <span className="hover:text-white transition-colors">321 402 4276</span>
+                  <a href="tel:+573159105890" className="hover:text-white transition-colors">
+                    315 910 5890
+                  </a>
                 </div>
               </div>
               
@@ -97,8 +98,8 @@ export default function Footer() {
                 <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-color-gold transition-colors duration-300">
                   <FaEnvelope className="text-color-gold group-hover:text-color-navy transition-colors duration-300 text-xs" />
                 </div>
-                <a href="mailto:mc.contadorescol@gmail.com" className="hover:text-white transition-colors pt-1">
-                  mc.contadorescol@gmail.com
+                <a href="mailto:gerencia@mccontadorescol.com" className="hover:text-white transition-colors pt-1">
+                  gerencia@mccontadorescol.com
                 </a>
               </div>
               

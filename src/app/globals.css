@@ -38,3 +38,11 @@ body {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0%); }
 }
+
+/* Justificación estética y selectiva solo para textos narrativos y párrafos largos */
+p.leading-relaxed:not(.text-center):not(.text-right) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+

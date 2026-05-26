@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import AnimatedSection from "@/components/global/AnimatedSection";
 import OptimizedImage from "@/components/global/OptimizedImage";
 import TeamSection from "@/components/pages/nosotros/components/TeamSection";
 import { FaBullseye, FaEye, FaStar, FaCheck } from "react-icons/fa";
 import AnimatedUnderline from "@/components/global/AnimatedUnderline";
+
+export const metadata: Metadata = {
+  title: "Quiénes Somos | Firma de Contabilidad y Auditoría en Colombia",
+  description: "Conozca la trayectoria de MC Contadores COL S.A.S. Nuestro equipo experto ofrece servicios de auditoría, revisoría fiscal y outsourcing contable en Bogotá y Soacha.",
+  alternates: {
+    canonical: "https://mccontadorescol.com/nosotros",
+  },
+};
 
 export default function Nosotros() {
   const valores = [

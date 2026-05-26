@@ -30,7 +30,7 @@ export default function MarketingBanner() {
               className="relative z-10 flex-shrink-0"
             >
               <a 
-                href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20me%20gustar%C3%ADa%20solicitar%20una%20propuesta%20de%20Outsourcing." 
+                href="https://wa.me/573159105890?text=Hola%20MC%20Contadores,%20me%20gustar%C3%ADa%20solicitar%20una%20propuesta%20de%20Outsourcing." 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-10 py-5 bg-color-gold text-color-navy font-bold rounded-xl hover:bg-white hover:text-color-navy transition-all duration-300 shadow-xl shadow-color-gold/20 text-lg"

@@ -171,6 +171,7 @@ export default function Navbar() {
               alt="Logo MC Contadores COL S.A.S"
               width={84}
               height={84}
+              priority
               className="object-cover rounded-lg shadow-md"
             />
           </Link>

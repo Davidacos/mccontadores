@@ -14,9 +14,24 @@ export default function AboutSummary() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-white skew-x-12 translate-x-20 z-0 hidden lg:block"></div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 mb-20">
+        {/* Mobile Title (visible only on mobile) */}
+        <div className="block lg:hidden mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-[2px] w-12 bg-color-gold"></div>
+            <span className="text-color-gold font-bold uppercase tracking-widest text-sm">
+              Nuestra Experiencia
+            </span>
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-bold text-color-navy leading-tight">
+            Aliados estratégicos para su{" "}
+            <span className="text-color-gold">crecimiento empresarial</span>
+          </h2>
+        </div>
+
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Left Side: Images & Floating Card */}
-          <div className="lg:w-1/2 w-full relative mt-10 lg:mt-0">
+          <div className="lg:w-1/2 w-full relative mt-6 lg:mt-0">
             <AnimatedSection>
               <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-xl overflow-hidden shadow-2xl border-8 border-white group">
                 <OptimizedImage
@@ -64,19 +79,22 @@ export default function AboutSummary() {
           </div>
 
           {/* Right Side: Text Content */}
-          <div className="lg:w-1/2 w-full mt-16 lg:mt-0">
+          <div className="lg:w-1/2 w-full mt-10 lg:mt-0">
             <AnimatedSection delay={0.2}>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-[2px] w-12 bg-color-gold"></div>
-                <span className="text-color-gold font-bold uppercase tracking-widest text-sm">
-                  Nuestra Experiencia
-                </span>
-              </div>
+              {/* Desktop Title (hidden on mobile) */}
+              <div className="hidden lg:block">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-[2px] w-12 bg-color-gold"></div>
+                  <span className="text-color-gold font-bold uppercase tracking-widest text-sm">
+                    Nuestra Experiencia
+                  </span>
+                </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold text-color-navy mb-8 leading-tight">
-                Aliados estratégicos para su{" "}
-                <span className="text-color-gold">crecimiento empresarial</span>
-              </h2>
+                <h2 className="text-3xl md:text-5xl font-bold text-color-navy mb-8 leading-tight">
+                  Aliados estratégicos para su{" "}
+                  <span className="text-color-gold">crecimiento empresarial</span>
+                </h2>
+              </div>
 
               <p className="text-lg text-gray-600 leading-relaxed mb-6 border-l-2 border-color-gold/30 pl-4">
                 <strong className="text-color-navy">

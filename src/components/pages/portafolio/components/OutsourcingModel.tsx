@@ -71,7 +71,7 @@ export default function OutsourcingModel() {
                   específicas de su empresa.
                 </p>
                 <a
-                  href="https://wa.me/573214024276?text=Hola%20MC%20Contadores,%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20para%20Outsourcing."
+                  href="https://wa.me/573159105890?text=Hola%20MC%20Contadores,%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20para%20Outsourcing."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block w-full px-8 py-4 bg-color-gold text-color-navy font-bold text-lg rounded-xl hover:bg-white hover:text-color-navy transition-all duration-300 shadow-xl"

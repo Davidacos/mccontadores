@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AnimatedSection from "@/components/global/AnimatedSection";
 import MarketingBanner from "@/components/global/MarketingBanner";
 import WhyChooseUs from "@/components/pages/home/components/WhyChooseUs";
@@ -90,6 +91,47 @@ const serviceData = {
 
 type Params = Promise<{ slug: string }>;
 
+export async function generateMetadata(props: { params: Params }): Promise<Metadata> {
+  const params = await props.params;
+  const slug = params.slug;
+
+  const seoData = {
+    contabilidad: {
+      title: "Outsourcing Contable y Balances NIIF | MC Contadores COL S.A.S.",
+      description: "Servicios de contabilidad para empresas en Bogotá, Soacha y Colombia. Balances bajo NIIF, contabilidad de costos y reportes financieros confiables."
+    },
+    impuestos: {
+      title: "Planeación Fiscal y Declaración de Impuestos | DIAN Colombia",
+      description: "Optimice su carga tributaria legalmente. Elaboración de renta, IVA, ICA, retención en la fuente y atención de requerimientos DIAN en Bogotá y Soacha."
+    },
+    asesoria: {
+      title: "Asesoría Financiera y Constitución de Sociedades | Colombia",
+      description: "Asesoría financiera estratégica para su negocio en Colombia. Constitución de SAS, auditoría externa, revisoría fiscal y control de riesgos."
+    },
+    outsourcing: {
+      title: "Outsourcing Contable BPO, Nómina y Tesorería | Colombia",
+      description: "Delegue la carga operativa. Gestión de nómina electrónica, prestaciones, tesorería BPO y conciliación bancaria para empresas en Bogotá y Soacha."
+    }
+  };
+
+  const currentSeo = seoData[slug as keyof typeof seoData];
+
+  if (!currentSeo) {
+    return {
+      title: "Servicios Profesionales de Contabilidad",
+      description: "Firma especializada en servicios de auditoría y consultoría contable, tributaria y financiera en Colombia."
+    };
+  }
+
+  return {
+    title: currentSeo.title,
+    description: currentSeo.description,
+    alternates: {
+      canonical: `https://mccontadorescol.com/portafolio/${slug}`,
+    },
+  };
+}
+
 export default async function ServicePage(props: { params: Params }) {
   const params = await props.params;
   const data = serviceData[params.slug as keyof typeof serviceData];
@@ -127,7 +169,7 @@ export default async function ServicePage(props: { params: Params }) {
               </p>
               
               <a 
-                href={`https://wa.me/573214024276?text=${encodeURIComponent(`Hola MC Contadores, me gustaría saber más sobre sus servicios de ${data.titleHighlight}.`)}`}
+                href={`https://wa.me/573159105890?text=${encodeURIComponent(`Hola MC Contadores, me gustaría saber más sobre sus servicios de ${data.titleHighlight}.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-color-gold text-color-navy font-bold rounded-full hover:bg-white hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-black/20"
