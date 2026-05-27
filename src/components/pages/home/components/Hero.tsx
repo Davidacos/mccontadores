@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import OptimizedImage from "@/components/global/OptimizedImage";
+import Image from "next/image";
 import AnimatedUnderline from "@/components/global/AnimatedUnderline";
 
 export default function Hero() {
@@ -72,31 +72,27 @@ export default function Hero() {
           </div>
 
           {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="lg:w-1/2 w-full relative"
-          >
+          <div className="lg:w-1/2 w-full relative">
             {/* Prominent Gold Decorative Element */}
             <div className="absolute -top-4 -left-4 w-full h-full border-4 border-color-gold rounded-2xl z-0"></div>
 
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl z-10 border-4 border-white">
               <div className="absolute inset-0 bg-color-navy/5 z-10 mix-blend-multiply"></div>
-              <OptimizedImage
+              <Image
                 src="/images/oficina_mccontadores.jpg"
                 alt="Oficina moderna de contabilidad y finanzas"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
                 className="object-cover"
-                containerClassName="w-full h-full"
+                // @ts-ignore
+                fetchPriority="high"
               />
             </div>
 
             {/* Floating Gold Element */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-color-gold to-color-gold-light rounded-full opacity-70 blur-xl z-0"></div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

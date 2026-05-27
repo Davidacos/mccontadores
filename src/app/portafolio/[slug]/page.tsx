@@ -91,6 +91,15 @@ const serviceData = {
 
 type Params = Promise<{ slug: string }>;
 
+export async function generateStaticParams() {
+  return [
+    { slug: "contabilidad" },
+    { slug: "impuestos" },
+    { slug: "asesoria" },
+    { slug: "outsourcing" },
+  ];
+}
+
 export async function generateMetadata(props: { params: Params }): Promise<Metadata> {
   const params = await props.params;
   const slug = params.slug;
@@ -142,8 +151,26 @@ export default async function ServicePage(props: { params: Params }) {
 
   const IconComponent = data.icon;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${data.titlePrefix}${data.titleHighlight}`,
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "MC Contadores COL S.A.S.",
+      "image": "https://mccontadorescol.com/images/logo.png",
+      "url": "https://mccontadorescol.com"
+    },
+    "description": data.description,
+    "areaServed": "CO"
+  };
+
   return (
     <div className="flex flex-col w-full bg-color-gray-light min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden bg-color-navy text-white">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] opacity-50 pointer-events-none from-color-gold/20 via-transparent to-transparent"></div>

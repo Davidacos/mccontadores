@@ -42,7 +42,7 @@ export default function ContactInfoBanner() {
       title: "Facebook",
       desc: "MC Contadores COL",
       icon: FaFacebook,
-      link: "https://facebook.com/McContadorescol",
+      link: "https://www.facebook.com/people/Mccontadores-Col/pfbid0M8MeXipBQDk3RRrbhUsQ56eDfXEevF7PiUndegaWeSyRDfGdVb27n8ADujhqXFYJl/?mibextid=wwXIfr&rdid=zuV7KwbMefMlVOlK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1D6YR2BCSF%2F%3Fmibextid%3DwwXIfr",
       color: "hover:bg-blue-600 hover:text-white hover:border-blue-600",
       iconColor: "text-blue-600",
     }

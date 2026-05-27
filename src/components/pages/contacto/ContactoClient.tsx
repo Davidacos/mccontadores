@@ -11,6 +11,7 @@ import {
   FaUser,
   FaClipboardList,
   FaCommentAlt,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { useState } from "react";
 import AnimatedUnderline from "@/components/global/AnimatedUnderline";
@@ -46,7 +47,7 @@ export default function ContactoClient() {
 
     const text = `Hola MC Contadores, mi nombre es *${name}*.\n\n*Correo:* ${email}\n*Teléfono:* ${phone}\n*Servicio de interés:* ${service || "No especificado"}\n\n*Mensaje:*\n${message}`;
     const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/573214024276?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/573159105890?text=${encodedText}`;
 
     window.open(whatsappUrl, "_blank");
 
@@ -113,19 +114,13 @@ export default function ContactoClient() {
                     </div>
                     <div>
                       <h3 className="text-color-gold font-bold mb-1">
-                        Teléfonos
+                        Teléfono
                       </h3>
                       <a
-                        href="tel:+573182600651"
+                        href="tel:+573159105890"
                         className="text-gray-300 hover:text-white transition-colors block py-0.5"
                       >
-                        +57 318 260 0651
-                      </a>
-                      <a
-                        href="tel:+573214024276"
-                        className="text-gray-300 hover:text-white transition-colors block py-0.5"
-                      >
-                        +57 321 402 4276
+                        +57 315 910 5890
                       </a>
                     </div>
                   </div>
@@ -139,10 +134,10 @@ export default function ContactoClient() {
                         Correo Electrónico
                       </h3>
                       <a
-                        href="mailto:mc.contadorescol@gmail.com"
+                        href="mailto:gerencia@mccontadorescol.com"
                         className="text-gray-300 hover:text-white transition-colors block py-0.5"
                       >
-                        mc.contadorescol@gmail.com
+                        gerencia@mccontadorescol.com
                       </a>
                     </div>
                   </div>
@@ -159,37 +154,24 @@ export default function ContactoClient() {
                         href="https://maps.google.com/?q=Colombia"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-white transition-colors block py-0.5"
+                        className="text-gray-300 hover:text-white transition-colors block py-0.5 mb-3"
                       >
                         Atención a nivel nacional
                         <br />
                         Sede principal: Colombia
                       </a>
+                      <div className="w-full h-80 rounded-xl overflow-hidden shadow-inner border border-white/10 relative mt-4 group-hover:border-color-gold/30 transition-colors duration-300">
+                        <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15913251.520448107!2d-82.59371661642234!3d4.141703666579893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x9d43b23f0653d87f!2sColombia!5e0!3m2!1ses!2sco!4v1716800000000!5m2!1ses!2sco" 
+                          width="100%" 
+                          height="100%" 
+                          style={{ border: 0 }} 
+                          allowFullScreen={true} 
+                          loading="lazy"
+                          className="opacity-75 hover:opacity-100 transition-all duration-500 filter invert contrast-125 saturate-50"
+                        ></iframe>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="mt-12 pt-8 border-t border-white/20">
-                  <h3 className="text-white font-bold mb-4">
-                    Síguenos en Redes Sociales
-                  </h3>
-                  <div className="flex gap-4">
-                    <a
-                      href="https://instagram.com/McContadorescol"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-color-navy-light flex items-center justify-center text-white hover:bg-color-gold hover:text-color-navy transition-all duration-300 border border-color-gold/30 hover:border-transparent"
-                    >
-                      <FaInstagram size={22} />
-                    </a>
-                    <a
-                      href="https://facebook.com/McContadorescol"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full bg-color-navy-light flex items-center justify-center text-white hover:bg-color-gold hover:text-color-navy transition-all duration-300 border border-color-gold/30 hover:border-transparent"
-                    >
-                      <FaFacebook size={22} />
-                    </a>
                   </div>
                 </div>
               </AnimatedSection>
@@ -399,6 +381,68 @@ export default function ContactoClient() {
                     </button>
                   </form>
                 )}
+
+                {/* Redes Sociales Directas */}
+                <div className="mt-12 pt-8 border-t border-gray-150">
+                  <p className="text-sm font-bold text-color-navy uppercase tracking-widest mb-4 text-center md:text-left">
+                    Conéctate con nosotros en Redes Sociales
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {/* WhatsApp */}
+                    <a
+                      href="https://wa.me/573159105890?text=Hola%20MC%20Contadores,%20estoy%20interesado%20en%20sus%20servicios."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:border-green-500/50 hover:bg-green-50/30 transition-all duration-300 group shadow-sm"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-green-500/10 text-green-600 flex items-center justify-center flex-shrink-0 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                        <FaWhatsapp className="text-xl" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-bold text-color-navy text-sm group-hover:text-green-600 transition-colors duration-300 truncate">
+                          WhatsApp
+                        </h4>
+                        <p className="text-[11px] text-gray-500 truncate">Atención rápida</p>
+                      </div>
+                    </a>
+
+                    {/* Instagram */}
+                    <a
+                      href="https://instagram.com/McContadorescol"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:border-pink-500/50 hover:bg-pink-50/30 transition-all duration-300 group shadow-sm"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-pink-500/10 text-pink-600 flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-to-tr group-hover:from-yellow-400 group-hover:via-red-500 group-hover:to-purple-500 group-hover:text-white transition-colors duration-300">
+                        <FaInstagram className="text-xl" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-bold text-color-navy text-sm group-hover:text-pink-600 transition-colors duration-300 truncate">
+                          Instagram
+                        </h4>
+                        <p className="text-[11px] text-gray-500 truncate">Novedades y tips</p>
+                      </div>
+                    </a>
+
+                    {/* Facebook */}
+                    <a
+                      href="https://www.facebook.com/people/Mccontadores-Col/pfbid0M8MeXipBQDk3RRrbhUsQ56eDfXEevF7PiUndegaWeSyRDfGdVb27n8ADujhqXFYJl/?mibextid=wwXIfr&rdid=zuV7KwbMefMlVOlK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1D6YR2BCSF%2F%3Fmibextid%3DwwXIfr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-200 hover:border-blue-600/50 hover:bg-blue-50/30 transition-all duration-300 group shadow-sm"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <FaFacebook className="text-xl" />
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="font-bold text-color-navy text-sm group-hover:text-blue-600 transition-colors duration-300 truncate">
+                          Facebook
+                        </h4>
+                        <p className="text-[11px] text-gray-500 truncate">Nuestra página</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </AnimatedSection>
             </div>
           </div>

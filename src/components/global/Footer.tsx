@@ -114,7 +114,7 @@ export default function Footer() {
                   <FaInstagram size={18} />
                 </a>
                 <a 
-                  href="https://facebook.com/McContadorescol" 
+                  href="https://www.facebook.com/people/Mccontadores-Col/pfbid0M8MeXipBQDk3RRrbhUsQ56eDfXEevF7PiUndegaWeSyRDfGdVb27n8ADujhqXFYJl/?mibextid=wwXIfr&rdid=zuV7KwbMefMlVOlK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1D6YR2BCSF%2F%3Fmibextid%3DwwXIfr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-color-gold hover:border-color-gold hover:text-color-navy transition-all duration-300"
