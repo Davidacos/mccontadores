@@ -8,22 +8,18 @@ import { motion } from "framer-motion";
 export default function TeamSection() {
   const team = [
     {
-      name: "Profesional 1",
-      role: "Socio Fundador / Director Contable",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
-      bio: "Experto en finanzas corporativas y planeación tributaria con más de 15 años de experiencia asesorando grandes empresas."
+      name: "Miguel Ángel Olivera Vargas",
+      role: "Gerente Contable y Tributario",
+      image: "/profesionales/olivera.jpeg",
+      bio: "Especialista en dirección estratégica y planeación fiscal. Experto en estructuración de procesos contables, optimización tributaria avanzada y acompañamiento integral ante entes de control y fiscalización.",
+      skills: ["Planeación Tributaria", "Auditoría Fiscal", "Dirección Contable", "Consultoría", "Defensa Fiscal"]
     },
     {
-      name: "Profesional 2",
-      role: "Especialista Tributario",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
-      bio: "Líder del área fiscal, encargada de estructuración impositiva y cumplimiento normativo ante entidades regulatorias."
-    },
-    {
-      name: "Profesional 3",
-      role: "Auditor Senior",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
-      bio: "Especialista en auditoría financiera y NIIF, enfocado en el fortalecimiento del control interno y mitigación de riesgos."
+      name: "Cristian Niampira",
+      role: "Contador Público Especializado",
+      image: "/profesionales/cristian.jpeg",
+      bio: "Profesional enfocado en gestión financiera y cumplimiento bajo estándares internacionales. Experto en implementación de NIIF (IFRS), auditoría integral, control interno y fiscalización tributaria.",
+      skills: ["Normas NIIF / IFRS", "Gestión Financiera", "Fiscalización", "Control Interno", "Auditoría Financiera"]
     }
   ];
 
@@ -44,7 +40,7 @@ export default function TeamSection() {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
           {team.map((member, index) => (
             <motion.div 
               key={index} 
@@ -64,7 +60,7 @@ export default function TeamSection() {
                     src={member.image} 
                     alt={member.name} 
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     containerClassName="w-full h-full"
                   />
@@ -89,9 +85,24 @@ export default function TeamSection() {
                   <div className="inline-block px-3 py-1 bg-color-navy/5 text-color-navy rounded-lg text-xs font-bold uppercase tracking-wide mb-4 self-start">
                     {member.role}
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed mb-6">
                     {member.bio}
                   </p>
+                  
+                  {/* Skill tags */}
+                  <div className="mt-auto pt-4 border-t border-gray-100">
+                    <span className="text-xs font-semibold text-color-navy/50 block mb-2 uppercase tracking-wider">Habilidades:</span>
+                    <div className="flex flex-wrap gap-1.5">
+                      {member.skills.map((skill, sIdx) => (
+                        <span 
+                          key={sIdx} 
+                          className="px-2 py-0.5 bg-color-navy/5 text-color-navy rounded text-[11px] font-semibold transition-colors hover:bg-color-gold hover:text-color-navy cursor-default"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
               </div>
